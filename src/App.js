@@ -5,15 +5,16 @@ import "./App.css";
 import Photo from "./Components/Photo";
 
 function App() {
-  const [data, setData] = useState();
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get("https://api.nasa.gov/planetary/apod?api_key=qER3c8vWhf1VkRfJwyfVdhYe8Gzgj86oaz721yn3")
+    axios.get("https://api.nasa.gov/planetary/apod?api_key=HQWzeXAazx1yKnF4QzMZLhfuD45Pf3tt2oHl9qop")
 .then(res => { 
   setData(res.data);
 }).catch(err => {
   console.log(err)
 }, [])
+
   })
   return (
     <div className="App">
